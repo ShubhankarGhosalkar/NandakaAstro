@@ -11,10 +11,13 @@
       background: linear-gradient(135deg, #2b1055, #7597de);
       min-height: 100vh;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       color: white;
       font-family: 'Segoe UI', sans-serif;
+      position: relative;
+      padding-bottom: 80px; /* space for footer */
     }
 
     .content-box {
@@ -87,13 +90,32 @@
     }
 
     .zoom-img {
-      transition: transform 0.3s ease; /* Smooth zoom */
+      transition: transform 0.3s ease;
     }
-    
+
     .zoom-img:hover {
-      transform: scale(1.1); /* Zoom to 110% */
+      transform: scale(1.1);
     }
-    
+
+    footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      text-align: center;
+      padding: 10px 0;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #ffd369;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -116,6 +138,13 @@
 
     <p class="mt-3" id="statusText"></p>
   </div>
+
+  <footer>
+    &copy; 2025 NandakaAstro    — 
+    <a href="/Contact.html">Contact</a> |
+    <a href="/terms.html">Terms & Conditions</a> |
+    <a href="/Refund.html">Refund Policy</a>
+  </footer>
 
   <script>
     document.getElementById("buyNowBtn").addEventListener("click", async () => {
